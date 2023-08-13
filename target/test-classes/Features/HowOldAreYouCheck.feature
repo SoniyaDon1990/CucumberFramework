@@ -4,7 +4,6 @@ Feature: How Old Are you check
 Background: user is online
 Given User navigates to site HowOldAreYou
 
-@Last
 Scenario: User Submit without Name
 
 When user is in How old are you homepage
@@ -21,8 +20,24 @@ And user fill name
 And user Submits form
 Then user should be getting date error
 
+Scenario: User submit date in future 
+
+When user is in How old are you homepage
+And user fetch testData for "DateInFuture"
+And user fill user details
+And user Submits form
+Then user should be getting date error
+
+Scenario: User submit date above age limit
+
+When user is in How old are you homepage
+And user fetch testData for "DateInPast"
+And user fill user details
+And user Submits form
+Then user should be getting date error
+
 @Last
-Scenario: User Born in 1990
+Scenario: User submit correct date
 
 When user is in How old are you homepage
 And user fetch testData for "UserBornIn1990"

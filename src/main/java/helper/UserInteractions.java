@@ -352,7 +352,7 @@ public class UserInteractions {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return fileWithPath;
+		return fileWithPath.replace(Reporter.path, ".");
 	}
 	
 	public List<WebElement> getElements(By by) {

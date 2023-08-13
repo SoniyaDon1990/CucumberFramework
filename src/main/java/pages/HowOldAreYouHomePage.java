@@ -65,9 +65,9 @@ public class HowOldAreYouHomePage extends UserInteractions{
 
 	public void CompareString(String actual,String expected,String comment) throws Exception {
 		if(actual.equals(expected)) {
-			ReportComparision("Pass",comment+" should be "+ expected,comment+" was "+ actual);
+			ReportComparision("Pass",comment+" should be <b>\""+ expected+"</b>\"",comment+" was <b>\""+ actual+"\"</b>");
 		}else {
-			ReportComparision("Fail",comment+" should be "+ expected,comment+" was "+ actual);
+			ReportComparision("Fail",comment+" should be <b>\""+ expected+"\"",comment+" was \""+ actual+"\"");
 		}	
 	}
 

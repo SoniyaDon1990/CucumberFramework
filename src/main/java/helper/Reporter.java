@@ -15,6 +15,7 @@ public class Reporter {
 	public static String templatePath = System.getProperty("user.dir")+"\\src\\main\\resources\\Report\\template.html";
 	private static String resultPlaceholder = "<!-- INSERT_RESULTS -->"	;
 	public static String currentDate = new SimpleDateFormat("dd-MM-yyyy-hh-mm-ss").format(new Date());
+	public static String path = System.getProperty("user.dir")+"\\src\\test\\resources\\Reports\\report_" + currentDate;
 	public static int counter = 0;
 	public static File filePath;
 	public static String reportPath="";
@@ -107,7 +108,7 @@ public class Reporter {
 	
 	public static String  screenPath() {
 		counter = counter+1;
-		String reportPath = System.getProperty("user.dir")+"\\src\\test\\resources\\Reports\\report_" + currentDate + "\\screens\\"+counter+".png";
+		String reportPath = path + "\\screens\\"+counter+".png";
 		return reportPath;
 		
 	}

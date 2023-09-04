@@ -9,7 +9,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.BeforeStep;
 import io.cucumber.java.Scenario;
 
-public class Annotations {
+public class Hooks {
 	
 	
 	int stepNo = 0;

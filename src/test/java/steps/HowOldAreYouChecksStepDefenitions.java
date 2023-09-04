@@ -12,7 +12,7 @@ import pages.HowOldAreYouHomePage;
 
 public class HowOldAreYouChecksStepDefenitions extends Driver {
 
-	Annotations ano = new Annotations();
+	Hooks ano = new Hooks();
 	Driver driverHelp = new Driver();
 	Data data = new Data();
 

@@ -221,13 +221,18 @@ public class UserInteractions {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;  
 		jsExecutor.executeScript("arguments[0].style.border='2px solid red'", element);   
 		Select objSelect = new Select(element);
-		switch (type){
-		case "value":
+		if(type.equals("value"))
 			objSelect.selectByValue(option);
-		case "text":	
+		else if(type.equals("text"))
 			objSelect.deselectByVisibleText(option);
-		}
 		
+//		switch (type){
+//		case "value":
+//			objSelect.selectByValue(option);
+//		case "text":	
+//			objSelect.deselectByVisibleText(option);
+//		}
+//		
 		Reporter.report("Pass","<b>"+option +"</b>"+" should be selected for "+ elementName, option +" selected for "+ elementName, takeSnapShot());	
 		
 		jsExecutor.executeScript("arguments[0].style.border='0px solid red'", element);   
